@@ -9,14 +9,14 @@ public class Main {
 
 
         int index = LinearSearch.searchIntArray(testArray, searchValue1);
-        //System.out.println(index + "");
+        System.out.println(index + "");
         index = LinearSearch.searchIntArray(testArray, searchValue2);
-        //System.out.println(index + "");
+        System.out.println(index + "");
 
         int index2 = BinarySearch.searchIntArray(testArray, searchValue1);
-        //System.out.println(index2 + "");
+        System.out.println(index2 + "");
         index2 = BinarySearch.searchIntArray(testArray, searchValue2);
-        //System.out.println(index2 + "");
+        System.out.println(index2 + "");
 
         // Binary Search Tree
         BinarySearchTree bst = new BinarySearchTree(4);
@@ -25,8 +25,8 @@ public class Main {
         bst.insert(3);
         bst.insert(5);
 
-        //String printedTree = bst.preOrderPrintTree(bst.mRootNode, "");
-        //System.out.println(printedTree);
+        String printedTree = bst.preOrderPrintTree(bst.mRootNode, "");
+        System.out.println(printedTree);
 
         // LinkedList
         CustomLinkedList.Element element1 = new CustomLinkedList.Element(1);
@@ -47,6 +47,22 @@ public class Main {
 
         customLinkedList.deleteElement(2);
         System.out.println("LinkedList size: " + customLinkedList.size() + "");
+
+
+        // Stacks
+        System.out.println("\n----STACKS----");
+
+        CustomStack cs = new CustomStack(null);
+
+        for (int i = 0; i < 15; i++) {
+            CustomStack.Element element = new CustomStack.Element((int)(Math.pow(i, 2) + 3));
+            cs.push(element);
+        }
+
+        System.out.println(cs.mCustomLinkedList.size() + "");
+        // Should print 199
+        System.out.println(cs.pop().mValue + "");
+
 
     }
 }
