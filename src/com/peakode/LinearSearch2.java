@@ -11,10 +11,12 @@ public class LinearSearch2 {
             if (inputArray[index] == searchValue) {
                 valFound = true;
             } else {
-                if (index == inputArray.length-1)
+                if (index == inputArray.length - 1) {
                     index = -1;
-                else
+                    valFound = true;
+                } else {
                     index++;
+                }
             }
 
         }
