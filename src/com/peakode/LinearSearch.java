@@ -7,6 +7,7 @@ public class LinearSearch {
         int index = 0;
 
         while (index < inputArray.length && inputArray[index] < searchValue) {
+            System.out.println("Loop step: " + index);
             index++;
         }
         if (index >= inputArray.length || inputArray[index] != searchValue) return -1;

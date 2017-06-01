@@ -4,14 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
         int[] testArray = {1, 3, 9, 11, 15, 19, 29};
+        int[] testArray2 = {5, 11, 3, 4, 8, 9, 23};
         int searchValue1 = 1;
         int searchValue2 = 19;
 
 
-        int index = LinearSearch.searchIntArray(testArray, searchValue1);
-        System.out.println(index + "");
-        index = LinearSearch.searchIntArray(testArray, searchValue2);
-        System.out.println(index + "");
+        int index = LinearSearch.searchIntArray(testArray2, 3);
+        System.out.println("index is: " + index);
+        //System.out.println(index + "");
+        //index = LinearSearch.searchIntArray(testArray, searchValue2);
+        //System.out.println(index + "");
+
+        // Another type of LinearSearch
+        int ind = LinearSearch2.searchIntArray(testArray2, 25);
+        System.out.println("index is: " + ind);
 
         int index2 = BinarySearch.searchIntArray(testArray, searchValue1);
         System.out.println(index2 + "");
